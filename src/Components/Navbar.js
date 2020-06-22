@@ -19,12 +19,12 @@ class Navbar extends Component {
       <a class="mr-5 hover:text-gray-900" href="/categories">Categories</a>
       <a class="mr-5 hover:text-gray-900" href="/contact">Contact Us</a>
     </nav>
-    <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
+    <a href="/login" class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
         Login
-    </button>
-    <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
+    </a>
+    <a href="/signup" class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
         Sign up
-    </button>
+    </a>
     
   </div>
 </header>
