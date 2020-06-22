@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Logo from './my_image.jpg';
 
 class Contact extends Component {
   
