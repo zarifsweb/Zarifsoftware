@@ -12,8 +12,9 @@ footer{
    background-color: tomato
 }
 form{
-   background-color: white;
+   background-color: black;
    margin: 20%;
-   padding: 30px;
+   padding: 50px;
    border-radius: 14px;
+   color: white
 }
