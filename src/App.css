@@ -14,5 +14,6 @@ footer{
 form{
    background-color: white;
    margin: 20%;
-   padding: 20px
+   padding: 30px;
+   border-radius: 14px;
 }
