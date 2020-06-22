@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 class Login extends Component {
     constructor(props){
+        super(props);
         this.onChange = this.onChange.bind(this);
         this.state = {
             email : "",
