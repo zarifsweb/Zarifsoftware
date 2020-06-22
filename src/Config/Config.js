@@ -1,6 +1,5 @@
-import firebase from "firebase/app";
+import * as firebase from "firebase";
 
-function CONFIG() {
   const DB_CONFIG = {
     apiKey: "AIzaSyDXMFsk0lAOQ_xAZIkfhc9uheoVKZT5s88",
     authDomain: "zarif-software.firebaseapp.com",
@@ -10,9 +9,7 @@ function CONFIG() {
     messagingSenderId: "38199309727",
     appId: "1:38199309727:web:fa3c0cb82e81050860b9aa"
   };
-  return !firebase.apps.length
-    ? firebase.initializeApp(DB_CONFIG)
-    : firebase.app();
+  firebase.initializeApp(DB_CONFIG);
 }
 
-export default CONFIG;
+export default firebase;
