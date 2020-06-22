@@ -12,7 +12,7 @@ footer{
    background-color: tomato
 }
 form{
-   margin: auto 35%;
+   align-items: center
    padding: 50px;
    border-radius: 14px;
 }
