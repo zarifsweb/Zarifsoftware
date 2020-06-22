@@ -13,16 +13,16 @@ class Navbar extends Component {
       <span class="ml-3 text-xl">ZarifSoftware</span>
     </a>
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-      <a class="mr-5 hover:text-gray-900" href="/">Home</a>
-      <a class="mr-5 hover:text-gray-900" href="/about">About</a>
-      <a class="mr-5 hover:text-gray-900" href="/blog">Blog</a>
-      <a class="mr-5 hover:text-gray-900" href="/categories">Categories</a>
-      <a class="mr-5 hover:text-gray-900" href="/contact">Contact Us</a>
+      <a class="mr-5 hover:text-gray-500" href="/">Home</a>
+      <a class="mr-5 hover:text-gray-500" href="/about">About</a>
+      <a class="mr-5 hover:text-gray-500" href="/blog">Blog</a>
+      <a class="mr-5 hover:text-gray-500" href="/categories">Categories</a>
+      <a class="mr-5 hover:text-gray-500" href="/contact">Contact Us</a>
     </nav>
-    <a href="/login" class="inline-flex items-center bg-red-900 border-0 py-1 px-3 focus:outline-none hover:bg-red-300 rounded text-base mt-4 md:mt-0">
+    <a href="/login" class="inline-flex items-center bg-red-400 border-0 py-1 px-3 focus:outline-none hover:bg-red-300 rounded text-base mt-4 md:mt-0">
         Login
     </a>
-    <a href="/signup" class="inline-flex items-center bg-red-900 border-0 py-1 px-3 focus:outline-none hover:bg-red-300 rounded text-base mt-4 md:mt-0">
+    <a href="/signup" class="inline-flex items-center bg-red-400 border-0 py-1 px-3 focus:outline-none hover:bg-red-300 rounded text-base mt-4 md:mt-0">
         Sign up
     </a>
     
