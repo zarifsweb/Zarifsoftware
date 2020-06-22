@@ -14,19 +14,18 @@ class Navbar extends Component {
     </a>
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
       <a class="mr-5 hover:text-gray-900" href="/">Home</a>
-      <a class="mr-5 hover:text-gray-900" href="/">About</a>
-      <a class="mr-5 hover:text-gray-900" href="/">Blog</a>
-      <a class="mr-5 hover:text-gray-900" href="/">Categories</a>
-      <a class="mr-5 hover:text-gray-900" href="/">Contact Us</a>
+      <a class="mr-5 hover:text-gray-900" href="/about">About</a>
+      <a class="mr-5 hover:text-gray-900" href="/blog">Blog</a>
+      <a class="mr-5 hover:text-gray-900" href="/categories">Categories</a>
+      <a class="mr-5 hover:text-gray-900" href="/contact">Contact Us</a>
     </nav>
-    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
     <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
         Login
     </button>
     <button class="inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0">
         Sign up
     </button>
-    </nav>
+    
   </div>
 </header>
         )
