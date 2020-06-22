@@ -3,18 +3,20 @@ import React, {Component} from 'react';
 class Login extends Component {
     constructor(props){
         super(props);
-        this.handleChange = this.habdleChange.bind(this);
-        this.state = {
-            email : "",
-            password : "",
-        };
+        this.handleChange = this.handleChange.bind(this);
+        this.state ={
+           email: "",
+           password: "",
+           error: "",
+        }
     }
  
     handleChange(e){
-       this.setState({
-          [e.target.name] : e.target.value,
-       })
-    }
+    this.setState({
+      [e.target.name]: e.target.value,
+    })
+
+  }
     render(){
         return (
             <form class="w-full max-w-sm">
@@ -25,7 +27,7 @@ class Login extends Component {
       </label>
     </div>
     <div class="md:w-2/3">
-      <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="Sadman Islam Zarif" value={this.state.email} onChange={this.handleChange}/>
+      <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-full-name" type="text" placeholder="Your name" value={this.state.email} name="email" onChange={this.handleChange}/>
     </div>
   </div>
   <div class="md:flex md:items-center mb-6">
@@ -35,7 +37,7 @@ class Login extends Component {
       </label>
     </div>
     <div class="md:w-2/3">
-      <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-username" type="password" placeholder="******************" value={this.state.password} onChange={this.handleChange}/>
+      <input class="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-username" type="password" placeholder="Your Password" value={this.state.password} name="password" onChange={this.handleChange}/>
     </div>
   </div>
   <div class="md:flex md:items-center mb-6">
