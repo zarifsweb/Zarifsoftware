@@ -23,7 +23,7 @@ function App() {
               <About />
             </Route>
             <Route path="/contact">
-              <About />
+              <Contact />
             </Route>
           </Switch>
          </div>
