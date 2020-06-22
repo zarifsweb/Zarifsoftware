@@ -11,3 +11,7 @@ footer{
 .home{
    background-color: tomato
 }
+form{
+   background-color: white;
+   margin: 20px;
+}
