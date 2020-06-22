@@ -1,0 +1,13 @@
+header{
+   background-color: yellow;
+}
+
+footer{
+   background-color: powderblue;
+}
+.page{
+   min-height: 40rem;
+}
+.home{
+   background-color: tomato
+}
