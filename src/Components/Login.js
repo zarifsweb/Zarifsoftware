@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import firebase from '../Config/Config';
 import setCookie from './setCookie/setCookie';
-import getCookie from './getCookie/getCookie';
+import checkCookie from './checkCookie/checkCookie';
 import {Redirect} from 'react-router-dom';
 
 class Login extends Component {
@@ -39,7 +39,8 @@ class Login extends Component {
        });
     }
     render(){
-        return ({getCookie("user") ?
+        return (
+{(checkCookie("user")) ?
 (<Redirect to="/"/>) : (
 <React.Fragment>
  <h1 align="center" style={{fontSize: "35px",marginBottom: "20px", marginTop: "20px"}}>Login with your credentials</h1><br/>
@@ -82,8 +83,7 @@ class Login extends Component {
     </div>
   </div>
 </form>
-</React.Fragment>)}
-        )
+</React.Fragment>)})
     } 
   }
 
