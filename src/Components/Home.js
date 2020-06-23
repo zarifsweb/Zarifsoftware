@@ -22,7 +22,7 @@ class Home extends Component {
   
 {
 checkCookie("user") ?
-  <recent/>
+ ( <recent/>)
 :
   (
       <div class="flex justify-center">
