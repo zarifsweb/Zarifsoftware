@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import recent from './recent';
 import Logo from './my_image.jpg';
-import checkCookie from 'cookies/checkCookie';
+import checkCookie from './cookies/checkCookie';
 
 class Home extends Component {
   
