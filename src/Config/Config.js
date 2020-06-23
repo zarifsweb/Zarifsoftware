@@ -10,6 +10,6 @@ import * as firebase from "firebase";
     appId: "1:38199309727:web:fa3c0cb82e81050860b9aa"
   };
   firebase.initializeApp(DB_CONFIG);
-}
+
 
 export default firebase;
