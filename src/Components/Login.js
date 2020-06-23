@@ -23,7 +23,6 @@ class Login extends Component {
     
     onSubmit(e){
        e.preventDefault();
-       const {email, password} = this.state;
        this.db.collection("users").doc(this.state.email).get().then(
           (doc)=>{
              if(doc.exists){
