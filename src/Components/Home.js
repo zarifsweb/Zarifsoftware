@@ -19,8 +19,7 @@ class Home extends Component {
       </h1>
       <p class="mb-8 leading-relaxed">Here you can learn coding from blog. You can learn any programming language do you want. Plus you can learn to make cool projects with source code. I am Zarif. I am a web and android developer. Javascript is my favourite programming language.</p>
     </div>
-  </div>
-</section>
+  
 {
 checkCookie("user") ?
   <recent/>
@@ -33,6 +32,8 @@ checkCookie("user") ?
   )
 
 }
+</div>
+</section>
 </React.Fragment>
         )
     } 
