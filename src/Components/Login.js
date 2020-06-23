@@ -49,6 +49,7 @@ class Login extends Component {
     }
     render(){
         return (
+<div>
 { (this.state.login) ?
 (
 <Redirect to="/" />
@@ -94,7 +95,8 @@ class Login extends Component {
     </div>
   </div>
 </form>
-</React.Fragment>) } )
+</React.Fragment>) } 
+</div>)
     } 
  }
 
