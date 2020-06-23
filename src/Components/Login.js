@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import firebase from '../Config/Config';
 import setCookie from './setCookie/setCookie';
 import getCookie from './getCookie/getCookie';
+import {Redirect} from 'react-router-dom';
 
 class Login extends Component {
     constructor(props){
@@ -39,7 +40,7 @@ class Login extends Component {
     }
     render(){
         return ({getCookie("user") ?
-({window.location="/"}) : (
+(<Redirect to="/"/>) : (
 <React.Fragment>
  <h1 align="center" style={{fontSize: "35px",marginBottom: "20px", marginTop: "20px"}}>Login with your credentials</h1><br/>
  <form class="w-full max-w-sm container">
