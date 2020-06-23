@@ -4,6 +4,7 @@ import firebase from '../Config/Config';
 class Login extends Component {
     constructor(props){
         super(props);
+        this.db = firebase.firestore();
         this.handleChange = this.handleChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
         this.state ={
@@ -23,19 +24,16 @@ class Login extends Component {
     onSubmit(e){
        e.preventDefault();
        const {email, password} = this.state;
-       firebase.auth().createUserWithEmailAndPassword(email, password)
-      .catch(function(error) {
-         // Handle Errors here.
-         var errorCode = error.code;
-         var errorMessage = error.message;
-         if (errorCode === 'auth/weak-password') {
-            alert('The password is too weak.');
-         } else {
-            alert(errorMessage);
-         }
-         console.log(error);
-         window.location="/signup";
-       });
+       this.db.collection("users").doc(this.state.email).get().then
+          (doc)=>{
+             if(doc.exists){
+                alert("Successfully logged in!");
+                window.location="/";
+             }else{
+                alert("Invalid Credentials!");
+                window.location="/login";
+             }
+       })
     }
     render(){
         return (
