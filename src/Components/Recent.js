@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-class recent extends Component {
+class Recent extends Component {
   
     render(){
         return (
@@ -19,6 +19,6 @@ class recent extends Component {
     } 
   }
 
-export default recent;
+export default Recent;
 
 
