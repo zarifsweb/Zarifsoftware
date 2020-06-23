@@ -26,7 +26,7 @@ class Signup extends Component {
        const {email, password} = this.state;
        firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(()=>{
-          this.db.collection('users').doc(this.state.name).set({
+          this.db.collection('users').doc(email).set({
             email,
             password,
             username: this.state.name,
