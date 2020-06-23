@@ -15,6 +15,7 @@ class Recent extends Component {
           <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
         </div>
       </div>
+     </div>
   </div>
 </section>
         )
