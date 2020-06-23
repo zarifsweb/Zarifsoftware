@@ -40,8 +40,6 @@ class Login extends Component {
     }
     render(){
         return (
-{(checkCookie("user")) ?
-(<Redirect to="/"/>) : (
 <React.Fragment>
  <h1 align="center" style={{fontSize: "35px",marginBottom: "20px", marginTop: "20px"}}>Login with your credentials</h1><br/>
  <form class="w-full max-w-sm container">
@@ -83,9 +81,9 @@ class Login extends Component {
     </div>
   </div>
 </form>
-</React.Fragment>)})
+</React.Fragment>)
     } 
-  }
+ }
 
 export default Login;
 
