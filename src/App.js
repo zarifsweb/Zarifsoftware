@@ -5,6 +5,7 @@ import Home from './Components/Home';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Login from './Components/Login';
+import Logout from './Components/Logout';
 import Signup from './Components/Signup';
 import Footer from './Components/Footer';
 import './App.css';
@@ -30,6 +31,8 @@ function App() {
             <Route path="/login">
               <Login />
             </Route>
+            <Route path="/logout">
+              <Logout /
             <Route path="/signup">
               <Signup />
             </Route>
