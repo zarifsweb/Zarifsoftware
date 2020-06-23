@@ -49,7 +49,7 @@ class Login extends Component {
     }
     render(){
         return (
-{this.state.login ?
+{ (this.state.login) ?
 (
 <Redirect to="/" />
 ) : (
