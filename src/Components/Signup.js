@@ -24,6 +24,10 @@ class Signup extends Component {
        e.preventDefault();
        const {email, password} = this.state;
        firebase.auth().createUserWithEmailAndPassword(email, password)
+      .then(()=>{
+          alert("Successfully your account created!");
+          window.location="/";
+      })
       .catch(function(error) {
          // Handle Errors here.
          var errorCode = error.code;
@@ -36,8 +40,7 @@ class Signup extends Component {
          console.log(error);
          window.location="/signup";
        });
-       alert("Succesfully your account created!");
-       window.location="/";
+      
     }
     render(){
         return (
