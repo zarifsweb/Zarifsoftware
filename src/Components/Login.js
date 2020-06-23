@@ -24,7 +24,7 @@ class Login extends Component {
     onSubmit(e){
        e.preventDefault();
        const {email, password} = this.state;
-       this.db.collection("users").doc(this.state.email).get().then
+       this.db.collection("users").doc(this.state.email).get().then(
           (doc)=>{
              if(doc.exists){
                 alert("Successfully logged in!");
@@ -33,7 +33,7 @@ class Login extends Component {
                 alert("Invalid Credentials!");
                 window.location="/login";
              }
-       })
+       });
     }
     render(){
         return (
