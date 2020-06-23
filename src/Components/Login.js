@@ -25,7 +25,7 @@ class Login extends Component {
        e.preventDefault();
        this.db.collection("users").doc(this.state.email).get().then(
           (doc)=>{
-             if(doc.exists){
+             if(doc.exists && doc.data().password === this.state.password){
                 alert("Successfully logged in!");
                 window.location="/";
              }else{
