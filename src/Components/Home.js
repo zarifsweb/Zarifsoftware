@@ -23,7 +23,7 @@ class Home extends Component {
   
 {
 checkCookie("user") ?
- ( <h1 align="center" style={{fontSize: '30px'}}></h1>)
+ ( <h1 align="center" style={{fontSize: '30px'}}>Top Categories</h1>)
 :
   (
       <div class="flex justify-center">
