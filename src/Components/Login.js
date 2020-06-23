@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import firebase from '../Config/Config';
+import setCookie from './setCookie/setCookie';
+import getCookie from './getCookie/getCookie';
 
 class Login extends Component {
     constructor(props){
@@ -26,6 +28,7 @@ class Login extends Component {
        this.db.collection("users").doc(this.state.email).get().then(
           (doc)=>{
              if(doc.exists && doc.data().password === this.state.password){
+                setCookie("user", doc.data().username, 365);
                 alert("Successfully logged in!");
                 window.location="/";
              }else{
@@ -35,7 +38,8 @@ class Login extends Component {
        });
     }
     render(){
-        return (
+        return ({getCookie("user") ?
+(window.location="/") : (
 <React.Fragment>
  <h1 align="center" style={{fontSize: "35px",marginBottom: "20px", marginTop: "20px"}}>Login with your credentials</h1><br/>
  <form class="w-full max-w-sm container">
@@ -77,7 +81,7 @@ class Login extends Component {
     </div>
   </div>
 </form>
-</React.Fragment>
+</React.Fragment>)}
         )
     } 
   }
