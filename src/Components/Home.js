@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
+import recent from './recent';
 import Logo from './my_image.jpg';
+import checkCookie from 'cookies/checkCookie';
 
 class Home extends Component {
   
     render(){
         return (
-            <section class="text-gray-700 body-font">
+<React.Fragment>
+<section class="text-gray-700 body-font">
   <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
     <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
       <img class="object-cover object-center rounded" alt="hero" src={Logo}/>
@@ -15,13 +18,22 @@ class Home extends Component {
         <br class="hidden lg:inline-block"/> ZarifSoftware
       </h1>
       <p class="mb-8 leading-relaxed">Here you can learn coding from blog. You can learn any programming language do you want. Plus you can learn to make cool projects with source code. I am Zarif. I am a web and android developer. Javascript is my favourite programming language.</p>
-      <div class="flex justify-center">
-        <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Signup</button>
-        <button class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">Login</button>
-      </div>
     </div>
   </div>
 </section>
+{
+checkCookie("user") ?
+  <recent/>
+:
+  (
+      <div class="flex justify-center">
+        <a href="/signup" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Signup</button>
+        <a href="/login" class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">Login</button>
+      </div>
+  )
+
+}
+</React.Fragment>
         )
     } 
   }
