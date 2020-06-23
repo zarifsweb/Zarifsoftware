@@ -31,9 +31,9 @@ class Signup extends Component {
             password,
             username: this.state.name,
             description: ""
-          })
+          }).then(()=>{
           alert("Successfully your account created!");
-          window.location="/";
+          window.location="/";}).catch((error)=>{console.log(error.message)})
       })
       .catch(function(error) {
          // Handle Errors here.
