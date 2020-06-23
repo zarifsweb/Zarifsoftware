@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 import firebase from "../Config/Config";
+import setCookie from './cookies/setCookie';
+import checkCookie from './cookies/checkCookie';
+import { Redirect } from 'react-router-dom';
+
 
 class Signup extends Component {
     constructor(props){
@@ -12,8 +16,18 @@ class Signup extends Component {
            email: "",
            password: "",
            error: "",
+           login: false,
         }
     }
+
+    componentWillMount(){
+       if(checkCookie("user")){
+          this.setState({login: true})
+       }else{
+          this.setState({login: false})
+       }
+    }
+
  
     handleChange(e){
     this.setState({
@@ -54,6 +68,11 @@ class Signup extends Component {
     }
     render(){
         return (
+<div>
+{ (this.state.login) ?
+(
+<Redirect to="/" />
+) : (
 <React.Fragment>
  <h1 align="center" style={{fontSize: "35px",marginBottom: "20px", marginTop: "20px"}}>Sign up </h1><br/>
  <form class="w-full max-w-sm container">
@@ -105,7 +124,8 @@ class Signup extends Component {
     </div>
   </div>
 </form>
-</React.Fragment>
+</React.Fragment>)}
+</div>
         )
     } 
   }
