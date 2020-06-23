@@ -23,13 +23,16 @@ class Signup extends Component {
   }
     onSubmit(e){
        e.preventDefault();
-       const {email, password} = this.state;
+       const {email, password, name} = this.state;
+       if(email === "" && password === "" && name === ""){
+           alert("All fields are required!");
+       }else{
        firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(()=>{
           this.db.collection('users').doc(email).set({
             email,
             password,
-            username: this.state.name,
+            username: name,
             description: ""
           }).then(()=>{
           alert("Successfully your account created!");
@@ -47,7 +50,7 @@ class Signup extends Component {
          console.log(error);
          window.location="/signup";
        });
-      
+      }
     }
     render(){
         return (
