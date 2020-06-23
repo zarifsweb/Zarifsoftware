@@ -15,6 +15,7 @@ class recent extends Component {
     </div>
     </div>
   </div>
+  </div>
 </section>
         )
     } 
