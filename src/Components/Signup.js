@@ -24,7 +24,7 @@ class Signup extends Component {
     onSubmit(e){
        e.preventDefault();
        const {email, password, name} = this.state;
-       if(email === "" && password === "" && name === ""){
+       if(email === "" || password === "" || name === ""){
            alert("All fields are required!");
        }else{
        firebase.auth().createUserWithEmailAndPassword(email, password)
