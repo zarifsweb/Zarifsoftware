@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import recent from './recent';
+import Recent from './Recent';
 import Logo from './my_image.jpg';
 import checkCookie from './cookies/checkCookie';
 //import getCookie from './cookies/getCookie';
@@ -23,7 +23,7 @@ class Home extends Component {
   
 {
 checkCookie("user") ?
- (<div> <h1 align="center" style={{fontSize: '30px'}}>Top Categories</h1><recent/></div>)
+ (<div> <h1 align="center" style={{fontSize: '30px'}}>Top Categories</h1><Recent/></div>)
 :
   (
       <div class="flex justify-center">
