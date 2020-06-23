@@ -49,6 +49,7 @@ class Signup extends Component {
             username: name,
             description: ""
           }).then(()=>{
+          setCookie("user", name, 365);
           alert("Successfully your account created!");
           window.location="/";}).catch((error)=>{console.log(error.message)})
       })
