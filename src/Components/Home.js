@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import recent from './recent';
+//import recent from './recent';
 import Logo from './my_image.jpg';
 import checkCookie from './cookies/checkCookie';
+import getCookie from './cookies/getCookie';
 
 class Home extends Component {
   
@@ -22,7 +23,7 @@ class Home extends Component {
   
 {
 checkCookie("user") ?
- ( <recent/>)
+ ( <h1 align="center" style={{fontSize: '30px'}}>Welcome {getCookie("user")}</h1>)
 :
   (
       <div class="flex justify-center">
