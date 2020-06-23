@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import firebase from '../Config/Config';
 
 class Login extends Component {
     constructor(props){
@@ -21,6 +22,20 @@ class Login extends Component {
     
     onSubmit(e){
        e.preventDefault();
+       const {email, password} = this.state;
+       firebase.auth().createUserWithEmailAndPassword(email, password)
+      .catch(function(error) {
+         // Handle Errors here.
+         var errorCode = error.code;
+         var errorMessage = error.message;
+         if (errorCode == 'auth/weak-password') {
+            alert('The password is too weak.');
+         } else {
+            alert(errorMessage);
+         }
+         console.log(error);
+         window.location="/signup";
+       });
     }
     render(){
         return (
