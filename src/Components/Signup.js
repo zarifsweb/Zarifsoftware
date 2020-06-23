@@ -6,6 +6,7 @@ class Signup extends Component {
         super(props);
         this.handleChange = this.handleChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        this.db = firebase.firestore()
         this.state ={
            name: "",
            email: "",
@@ -25,6 +26,12 @@ class Signup extends Component {
        const {email, password} = this.state;
        firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(()=>{
+          db.collection('users').doc(this.state.name).set({
+            email,
+            password,
+            username: this.state.name,
+            description: ""
+          })
           alert("Successfully your account created!");
           window.location="/";
       })
