@@ -36,7 +36,9 @@ class Login extends Component {
     }
     render(){
         return (
-            <form class="w-full max-w-sm container">
+<React.Fragment>
+ <h1 align="center">Login with your credentials</h1>
+ <form class="w-full max-w-sm container">
   <div class="md:flex md:items-center mb-6">
     <div class="md:w-1/3">
       <label class="block text-gray-200 font-bold md:text-right mb-1 md:mb-0 pr-4" for="inline-full-name">
@@ -75,6 +77,7 @@ class Login extends Component {
     </div>
   </div>
 </form>
+</React.Fragment>
         )
     } 
   }
