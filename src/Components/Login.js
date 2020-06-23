@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import firebase from '../Config/Config';
-import setCookie from './setCookie/setCookie';
-import checkCookie from './checkCookie/checkCookie';
-import {Redirect} from 'react-router-dom';
+import setCookie from './cookies/setCookie';
 
 class Login extends Component {
     constructor(props){
