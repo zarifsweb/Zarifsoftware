@@ -20,11 +20,11 @@ class Navbar2 extends Component {
       <a class="mr-5 hover:text-gray-500" href="/categories">Categories</a>
       <a class="mr-5 hover:text-gray-500" href="/contact">Contact Us</a>
     </nav>
-    <div class="dropdown>
+    <div class="dropdown">
        <a href="/" class="dropbtn inline-flex items-center bg-red-400 border-0 py-1 px-3 focus:outline-none hover:bg-red-300 rounded text-base mt-4 md:mt-0">
           Welcome {getCookie("user")}
        </a>
-       <div class="dropdown-content>
+       <div class="dropdown-content">
           <a href="/logout" class="inline-flex items-center bg-red-400 border-0 py-1 px-3 focus:outline-none hover:bg-red-300 rounded text-base mt-4 md:mt-0">
              Logout
           </a>
