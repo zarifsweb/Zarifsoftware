@@ -35,6 +35,8 @@ class Signup extends Component {
          console.log(error);
          window.location="/signup";
        });
+       alert("Succesfully your account created!");
+       window.location="/";
     }
     render(){
         return (
