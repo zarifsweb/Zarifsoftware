@@ -4,6 +4,7 @@ class Signup extends Component {
     constructor(props){
         super(props);
         this.handleChange = this.handleChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
         this.state ={
            name: "",
            email: "",
@@ -18,6 +19,23 @@ class Signup extends Component {
     })
 
   }
+    onSubmit(e){
+       e.preventDefault();
+       const {email, password} = this.state;
+       firebase.auth().createUserWithEmailAndPassword(email, password)
+      .catch(function(error) {
+         // Handle Errors here.
+         var errorCode = error.code;
+         var errorMessage = error.message;
+         if (errorCode == 'auth/weak-password') {
+            alert('The password is too weak.');
+         } else {
+            alert(errorMessage);
+         }
+         console.log(error);
+         window.location="/signup";
+       });
+    }
     render(){
         return (
             <form class="w-full max-w-sm container">
