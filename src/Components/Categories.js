@@ -60,6 +60,8 @@ class Categories extends Component {
         </div>
       </div>
       <hr/>
+      <br/>
+      <br/>
       </React.Fragment>
      )}
     </div>
