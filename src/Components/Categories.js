@@ -49,7 +49,7 @@ class Categories extends Component {
 ) : (
 <Redirect to="/login"/>
 )
-
+}
 </div>      
         )
     } 
