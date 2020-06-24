@@ -8,6 +8,7 @@ import Login from './Components/Login';
 import Logout from './Components/Logout';
 import Signup from './Components/Signup';
 import Categories from './Components/Categories';
+import Category from './Components/Category';
 import Footer from './Components/Footer';
 import './App.css';
 
@@ -37,6 +38,9 @@ function App() {
             </Route>
             <Route path="/categories">
               <Categories />
+            </Route>
+            <Route path="/category">
+              <Category />
             </Route>
             <Route path="/signup">
               <Signup />
