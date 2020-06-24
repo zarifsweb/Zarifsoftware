@@ -13,8 +13,7 @@ class Categories extends Component {
            
         }
     }
-    
-    componentWillMount(){
+    componentDidMount(){
        firebase
           .firestore()
           .collection('categories')
@@ -28,6 +27,8 @@ class Categories extends Component {
           })
           .catch((err) => console.error(err));
 
+    }
+    componentWillMount(){       
        if(checkCookie("user")){
           this.setState({login: true})
        }else{
