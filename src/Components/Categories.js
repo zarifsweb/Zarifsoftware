@@ -1,9 +1,30 @@
 import React, {Component} from 'react';
+import {Redirect} from 'react-router-dom';
 
 class Categories extends Component {
-  
+    constructor(props){
+        super(props);
+        this.db = firebase.firestore();
+        this.state ={
+           categories : [],
+           login: false,
+           
+        }
+    }
+    
+    componentWillMount(){
+       if(checkCookie("user")){
+          this.setState({login: true})
+       }else{
+          this.setState({login: false})
+       }
+    }
+
     render(){
         return (
+<div>
+
+{ this.state.login ? (
 <section class="text-gray-700 body-font overflow-hidden">
   <div class="container px-5 py-24 mx-auto">
     <div class="-my-8">
@@ -24,7 +45,12 @@ class Categories extends Component {
  
     </div>
   </div>
-</section>           
+</section>   
+) : (
+<Redirect to="/login"/>
+)
+
+</div>      
         )
     } 
   }
