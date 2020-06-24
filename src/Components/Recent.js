@@ -20,13 +20,14 @@ class Recent extends Component {
                  description: doc.data().description,
                  url: doc.data().url,
               });
+              return true;
            });
-           
+           this.setState({categories: desc});
        })
        .catch((error)=>{
           console.log(error);
        })
-       this.setState({categories: desc});
+       
     }
     render(){
         return (
