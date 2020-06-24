@@ -36,7 +36,7 @@ class Recent extends Component {
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap -m-4">
      {this.state.categories.map((category)=>{
-      (<div class="xl:w-1/4 md:w-1/2 p-4">
+      return (<div class="xl:w-1/4 md:w-1/2 p-4">
         <div class="bg-gray-100 p-6 rounded-lg">
           <img class="h-40 rounded w-full object-cover object-center mb-6" src={category.url} alt="content"/>
           <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
