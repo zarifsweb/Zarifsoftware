@@ -27,7 +27,7 @@ checkCookie("user") ?
       <div class="flex justify-center">
         <a href="/categories" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Go to blog</a>
       </div>
- </div)
+ </div>)
   :(
       <div class="flex justify-center">
         <a href="/signup" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Signup</a>
