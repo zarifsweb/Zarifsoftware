@@ -20,7 +20,7 @@ class Categories extends Component {
        this.unsubscribe = this.db.collection("categories").get().then((querySnapshot) => {
           const categories = [];
           querySnapshot.forEach((doc) => {
-             console.log(`${doc.id} => ${doc.data()}`);
+             document.write(`${doc.id} => ${doc.data()}`);
              categories.push({
                 id: doc.id,
                 name: doc.data().name,
