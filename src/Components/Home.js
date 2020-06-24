@@ -24,12 +24,12 @@ class Home extends Component {
 {
 checkCookie("user") ?
  (<div><br/>
-      <div class="flex justify-center">
+      <div>
         <a href="/categories" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Go to blog</a>
       </div>
  </div>)
   :(
-      <div class="flex justify-center">
+      <div>
         <a href="/signup" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Signup</a>
         <a href="/login" class="ml-4 inline-flex text-gray-700 bg-gray-200 border-0 py-2 px-6 focus:outline-none hover:bg-gray-300 rounded text-lg">Login</a>
       </div>
