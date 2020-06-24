@@ -46,7 +46,9 @@ class Categories extends Component {
     {this.state.error}
     { this.state.categories.map ( category => 
       <React.Fragment>
-      
+      <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+          <img src={category.url} alt={category.name} width=100 height=100/>
+      </div>
       <div class="py-8 flex flex-wrap md:flex-no-wrap p-8" style={{backgroundColor: "white"}}>
         <div class="md:flex-grow">
           <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{category.name}</h2>
