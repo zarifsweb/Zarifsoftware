@@ -20,6 +20,7 @@ class Categories extends Component {
           </a>
         </div>
       </div>
+      <hr/>
  
     </div>
   </div>
