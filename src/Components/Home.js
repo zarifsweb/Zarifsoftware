@@ -19,15 +19,15 @@ class Home extends Component {
         <br class="hidden lg:inline-block"/> ZarifSoftware
       </h1>
       <p class="mb-8 leading-relaxed">Here you can learn coding from blog. You can learn any programming language do you want. Plus you can learn to make cool projects with source code. I am Zarif. I am a web and android developer. Javascript is my favourite programming language.</p>
-    </div>
+    
   
 {
 checkCookie("user") ?
- (<div><br/>
+ (
       <div>
         <a href="/categories" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Go to blog</a>
       </div>
- </div>)
+ )
   :(
       <div>
         <a href="/signup" class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Signup</a>
@@ -36,6 +36,7 @@ checkCookie("user") ?
   )
 
 }
+</div>
 </div>
 </section>
 </React.Fragment>
