@@ -10,6 +10,7 @@ class Categories extends Component {
         this.state ={
            categories : [],
            login: false,
+           error: ""
            
         }
     }
@@ -27,7 +28,7 @@ class Categories extends Component {
              })
           });
           this.setState({categories});
-       });
+       }).catch(err => this.setState({ error: err}))
        if(checkCookie("user")){
           this.setState({login: true})
        }else{
@@ -43,8 +44,10 @@ class Categories extends Component {
 <section class="text-gray-700 body-font overflow-hidden">
   <div class="container px-5 py-24 mx-auto">
     <div class="-my-8">
+    {this.state.error}
     { this.state.categories.map ( category => 
       <React.Fragment>
+      
       <div class="py-8 flex flex-wrap md:flex-no-wrap p-8" style={{backgroundColor: "white"}}>
         <div class="md:flex-grow">
           <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{category.name}h</h2>
