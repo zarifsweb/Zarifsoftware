@@ -41,7 +41,7 @@ class Categories extends Component {
 
 { this.state.login ? (
 <section class="text-gray-700 body-font overflow-hidden">
-  <h1 align="center" style={{fontSize: "30px", color: "black"}}>All Categories</h1>
+  <h1 align="center" style={{fontSize: "30px", color: "black", fontWeight: "bold"}}>All Categories</h1>
   <div class="container px-5 py-24 mx-auto">
     <div class="-my-8">
     {this.state.error}
