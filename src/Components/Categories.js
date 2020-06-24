@@ -7,6 +7,7 @@ class Categories extends Component {
     constructor(props){
         super(props);
         this.db = firebase.firestore();
+        this.unsubscribe = null;
         this.state ={
            categories : [],
            login: false,
@@ -16,7 +17,7 @@ class Categories extends Component {
     }
     
     componentWillMount(){
-       this.db.collection("categories").onSnapshot((querySnapshot) => {
+       this.unsubscribe = this.db.collection("categories").onSnapshot((querySnapshot) => {
           const categories = [];
           querySnapshot.forEach((doc) => {
              console.log(`${doc.id} => ${doc.data()}`);
@@ -29,6 +30,7 @@ class Categories extends Component {
           });
           this.setState({categories});
        }).catch(err => this.setState({ error: err}))
+
        if(checkCookie("user")){
           this.setState({login: true})
        }else{
