@@ -8,10 +8,6 @@ class Categories extends Component {
   <div class="container px-5 py-24 mx-auto">
     <div class="-my-8">
       <div class="py-8 flex flex-wrap md:flex-no-wrap">
-        <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-          <span class="tracking-widest font-medium title-font text-gray-900">CATEGORY</span>
-          <span class="mt-1 text-gray-300 text-sm">12 Jun 2019</span>
-        </div>
         <div class="md:flex-grow">
           <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Python</h2>
           <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
@@ -24,10 +20,6 @@ class Categories extends Component {
         </div>
       </div>
       <div class="py-8 flex border-t-2 border-gray-200 flex-wrap md:flex-no-wrap">
-        <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-          <span class="tracking-widest font-medium title-font text-gray-900">CATEGORY</span>
-          <span class="mt-1 text-gray-300 text-sm">12 Jun 2019</span>
-        </div>
         <div class="md:flex-grow">
           <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Javascript</h2>
           <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
@@ -40,10 +32,6 @@ class Categories extends Component {
         </div>
       </div>
       <div class="py-8 flex border-t-2 border-gray-200 flex-wrap md:flex-no-wrap">
-        <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-          <span class="tracking-widest font-medium title-font text-gray-900">CATEGORY</span>
-          <span class="mt-1 text-gray-300 text-sm">12 Jun 2019</span>
-        </div>
         <div class="md:flex-grow">
           <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">Java</h2>
           <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha lumbersexual pork belly polaroid hoodie portland craft beer.</p>
