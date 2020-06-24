@@ -4,7 +4,7 @@ class Categories extends Component {
   
     render(){
         return (
-<section class="text-gray-700 body-font overflow-hidden">
+<section class="text-gray-700 body-font overflow-hidden" style={{backgroundColor: "white"}}>
   <div class="container px-5 py-24 mx-auto">
     <div class="-my-8">
       <div class="py-8 flex flex-wrap md:flex-no-wrap">
