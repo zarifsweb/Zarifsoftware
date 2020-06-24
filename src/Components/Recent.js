@@ -11,7 +11,7 @@ class Recent extends Component {
 
     }
     componentWillMount(){
-       desc = this.state.categories; 
+       const desc = this.state.categories; 
        this.ref.limit(2).get()
        .then((data)=>{
            data.map((doc)=>{
