@@ -6,8 +6,6 @@ import {Redirect} from 'react-router-dom';
 class Categories extends Component {
     constructor(props){
         super(props);
-        this.db = firebase.firestore();
-        this.unsubscribe = null;
         this.state ={
            categories : [],
            login: false,
@@ -17,19 +15,18 @@ class Categories extends Component {
     }
     
     componentWillMount(){
-       this.unsubscribe = this.db.collection("categories").get().then((querySnapshot) => {
-          const categories = [];
-          querySnapshot.forEach((doc) => {
-             console.log(`${doc.id} => ${doc.data()}`);
-             categories.push({
-                id: doc.id,
-                name: doc.data().name,
-                description : doc.data().description,
-                url: doc.data().url,
-             })
+       firebase
+          .firestore()
+          .collection('categories')
+          .get()
+          .then((data) => {
+            let categories = [];
+            data.forEach((doc) => {
+                categories.push(doc.data());
+            });
+            this.setState({categories});
           });
-          this.setState({categories});
-       }).catch(err => this.setState({ error: err}));
+          .catch((err) => console.error(err));
 
        if(checkCookie("user")){
           this.setState({login: true})
