@@ -48,7 +48,7 @@ class Categories extends Component {
       <React.Fragment>
       <div class="py-8 flex flex-wrap md:flex-no-wrap p-8" style={{backgroundColor: "white"}}>
         <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-           <img class="lg:h-48 md:h-36 w-full object-cover object-center" src={category.url} alt={category.name} style={{height:"100px", width:"100px", backgroundColor: "white"}} />
+           <img class="lg:h-48 md:h-36 w-full object-cover object-center" src={category.url} alt={category.name} style={{height:"150px", width:"150px",backgroundSize: "100% 100%", backgroundColor: "white"}} />
         </div>
         <div class="md:flex-grow">
           <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{category.name}</h2>
