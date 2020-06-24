@@ -11,7 +11,7 @@ class Recent extends Component {
 
     }
     componentWillMount(){
-       const desc = this.state.categories; 
+       const desc = []; 
        this.ref.limit(2).get()
        .then((data)=>{
            data.map((doc)=>{
@@ -21,12 +21,12 @@ class Recent extends Component {
                  url: doc.data().url,
               });
            });
-           this.setState({categories: desc});
+           
        })
        .catch((error)=>{
           console.log(error);
        })
-
+       this.setState({categories: desc});
     }
     render(){
         return (
