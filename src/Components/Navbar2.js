@@ -16,8 +16,7 @@ class Navbar2 extends Component {
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
       <a class="mr-5 hover:text-gray-500" href="/">Home</a>
       <a class="mr-5 hover:text-gray-500" href="/about">About</a>
-      <a class="mr-5 hover:text-gray-500" href="/blog">Blog</a>
-      <a class="mr-5 hover:text-gray-500" href="/categories">Categories</a>
+      <a class="mr-5 hover:text-gray-500" href="/categories">Blog</a>
       <a class="mr-5 hover:text-gray-500" href="/contact">Contact Us</a>
     </nav>
     <div class="dropdown">
