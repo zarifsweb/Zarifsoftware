@@ -7,6 +7,7 @@ import Contact from './Components/Contact';
 import Login from './Components/Login';
 import Logout from './Components/Logout';
 import Signup from './Components/Signup';
+import Categories from './Components/Categories';
 import Footer from './Components/Footer';
 import './App.css';
 
@@ -33,6 +34,9 @@ function App() {
             </Route>
             <Route path="/logout">
               <Logout />
+            </Route>
+            <Route path="/categories">
+              <Categories />
             </Route>
             <Route path="/signup">
               <Signup />
