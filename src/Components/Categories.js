@@ -17,7 +17,7 @@ class Categories extends Component {
     }
     
     componentWillMount(){
-       this.unsubscribe = this.db.collection("categories").onSnapshot((querySnapshot) => {
+       this.unsubscribe = this.db.collection("categories").get().then((querySnapshot) => {
           const categories = [];
           querySnapshot.forEach((doc) => {
              console.log(`${doc.id} => ${doc.data()}`);
@@ -29,7 +29,7 @@ class Categories extends Component {
              })
           });
           this.setState({categories});
-       }).catch(err => this.setState({ error: err}))
+       }).catch(err => this.setState({ error: err}));
 
        if(checkCookie("user")){
           this.setState({login: true})
