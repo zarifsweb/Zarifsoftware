@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Recent from './Recent';
+//import Recent from './Recent';
 import Logo from './my_image.jpg';
 import checkCookie from './cookies/checkCookie';
 //import getCookie from './cookies/getCookie';
