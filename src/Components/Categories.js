@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import checkCookie from './cookies/checkCookie';
+import firebase from '../Config/Config';
 import {Redirect} from 'react-router-dom';
 
 class Categories extends Component {
