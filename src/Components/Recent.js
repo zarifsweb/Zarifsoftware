@@ -33,7 +33,7 @@ class Recent extends Component {
 <section class="text-gray-700 body-font">
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap -m-4">
-     {this.state.desc.map((category)=>{
+     {this.state.categories.map((category)=>{
       return (<div class="xl:w-1/4 md:w-1/2 p-4">
         <div class="bg-gray-100 p-6 rounded-lg">
           <img class="h-40 rounded w-full object-cover object-center mb-6" src={category.url} alt="content"/>
@@ -42,7 +42,7 @@ class Recent extends Component {
           <p class="leading-relaxed text-base">{category.description}</p>
         </div>
       </div>)
-     }}
+     })}
      </div>
   </div>
 </section>
