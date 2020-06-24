@@ -39,7 +39,7 @@ function App() {
             <Route path="/categories">
               <Categories />
             </Route>
-            <Route path="/category">
+            <Route path="/category/:id">
               <Category />
             </Route>
             <Route path="/signup">
