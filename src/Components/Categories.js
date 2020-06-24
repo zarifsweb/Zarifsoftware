@@ -17,7 +17,7 @@ class Categories extends Component {
     componentWillMount(){     
         firebase
           .firestore()
-          .collection('categories')
+          .collection('users')
           .get()
           .then((data) => {
             let categories = [];
@@ -49,7 +49,7 @@ class Categories extends Component {
       
       <div class="py-8 flex flex-wrap md:flex-no-wrap p-8" style={{backgroundColor: "white"}}>
         <div class="md:flex-grow">
-          <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{category.name}</h2>
+          <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{category.username}</h2>
           <p class="leading-relaxed">{category.description}</p>
           <a href="/" class="text-indigo-500 inline-flex items-center mt-4">Learn More
             <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
