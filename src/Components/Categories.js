@@ -13,10 +13,7 @@ class Categories extends Component {
            
         }
     }
-    componentDidMount(){
-       
-
-    }
+    
     componentWillMount(){     
         firebase
           .firestore()
