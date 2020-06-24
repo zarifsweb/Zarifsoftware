@@ -46,10 +46,10 @@ class Categories extends Component {
     {this.state.error}
     { this.state.categories.map ( category => 
     <React.Fragment>    
+      <div class="py-8 flex flex-wrap md:flex-no-wrap p-8" style={{backgroundColor: "white"}}>
       <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
            <img class="lg:h-48 md:h-36 w-full object-cover object-center" src={category.url} alt={category.name} style={{ backgroundColor: "white", width: "200px", height: "200px"}} />
       </div>
-      <div class="py-8 flex flex-wrap md:flex-no-wrap p-8" style={{backgroundColor: "white"}}>
         <div class="md:flex-grow">
           <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{category.name}</h2>
           <p class="leading-relaxed">{category.description.substring(0, 100)}..</p>
