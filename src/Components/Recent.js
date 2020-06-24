@@ -11,12 +11,18 @@ class Recent extends Component {
 
     }
     componentWillMount(){
-       const desc = []; 
+       const categories = []; 
        this.ref.limit(2).get()
        .then((data)=>{
-           data.map((doc)=>{
-              this.setState({categories: doc});
+           data.forEach((doc)=>{
+              const {name, description, url} = doc.data()
+              categories.push({
+                 name,
+                 description,
+                 url
+              })
            });
+           this.setState({categories})
            
        })
        .catch((error)=>{
