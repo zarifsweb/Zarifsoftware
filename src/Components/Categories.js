@@ -15,7 +15,7 @@ class Categories extends Component {
         }
     }
     
-    componentWillMount(){
+    componentDidMount(){
        this.db.collection("categories").onSnapshot((querySnapshot) => {
           const categories = [];
           querySnapshot.forEach((doc) => {
