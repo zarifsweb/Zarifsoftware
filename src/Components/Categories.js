@@ -25,7 +25,7 @@ class Categories extends Component {
                 categories.push(doc.data());
             });
             this.setState({categories});
-          });
+          })
           .catch((err) => console.error(err));
 
        if(checkCookie("user")){
