@@ -18,7 +18,7 @@ class Category extends Component {
     }
     
     componentWillMount(){     
-       this.db.collection('cat').doc(this.props.id).get().then(
+       this.db.collection('cat').where("name", "==", this.props.id).get().then(
           (doc)=>{
              if(doc.exists){
                 this.setState({
