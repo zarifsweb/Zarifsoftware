@@ -24,8 +24,10 @@ class Category extends Component {
                 this.setState({
                     category: doc.data()
                 })
+             }else{
+                  window.location="/categories"
              }
-          }
+          });
 
        if(checkCookie("user")){
           this.setState({login: true})
