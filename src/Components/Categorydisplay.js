@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Logo from './my_image.jpg';
 
-class About extends Component {
+class Categorydisplay extends Component {
   
     render(){
         return (
@@ -22,6 +22,6 @@ class About extends Component {
     } 
   }
 
-export default About;
+export default Categorydisplay;
 
 
