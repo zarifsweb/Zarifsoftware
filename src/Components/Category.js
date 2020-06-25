@@ -23,7 +23,7 @@ class Category extends Component {
           .doc(this.props.match.params.id)
           .get()
           .then((doc) => {
-            if (doc.exists()){
+            if (doc.exists){
                this.setState({
                   category: doc.data()
                })
