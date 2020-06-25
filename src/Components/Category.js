@@ -39,7 +39,7 @@ class Category extends Component {
            <React.Fragment>
              { this.state.login ? 
              (
-               {this.props.match.params.id}
+               <h1>{this.props.match.params.id}</h1>
                )
              : (<Redirect to="/login"/>)
              }
