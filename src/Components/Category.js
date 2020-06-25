@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Redirect} from 'react-router-dom';
 import Categorydisplay from './Categorydisplay';
 import Categoryblog from './Categoryblog';
 
@@ -29,6 +30,9 @@ class Category extends Component {
                   url: doc.data().url
                })
             }
+            else{
+               window.location="/categories";
+            }
           })
           .catch((err) => console.error(err)); 
 
@@ -40,8 +44,15 @@ class Category extends Component {
     }
     render(){
         return (
-           <Categorydisplay name={this.state.name} description={this.state.description} url={this.state.url}/>
-           <Categoryblog name={this.state.name}/>
+           <React.Fragment>
+             { this.state.login ? 
+             (<div>
+               <Categorydisplay name={this.state.name} description={this.state.description} url={this.state.url}/>
+               <Categoryblog name={this.state.name}/>
+             </div>)
+             : (<Redirect to="/login"/>)
+             }
+           </React.Fragment>
         )
     } 
   }
