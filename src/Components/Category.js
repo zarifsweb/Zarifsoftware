@@ -46,7 +46,7 @@ class Category extends Component {
              { this.state.login ? 
              (<div>
                <Categorydisplay name={this.state.category.name} description={this.state.category.description} url={this.state.category.url}/>
-               <Categoryblog name={this.state.name}/>
+               <Categoryblog name={this.state.category.name}/>
              </div>)
              : (<Redirect to="/login"/>)
              }
