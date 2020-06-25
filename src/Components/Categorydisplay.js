@@ -4,9 +4,7 @@ import React, {Component} from 'react';
 class Categorydisplay extends Component {
     constructor(props){
        super(props);
-       this.name = props.catname;
-       this.description = props.catdescription;
-       this.url = props.caturl;
+       
     }
     render(){
         return (
