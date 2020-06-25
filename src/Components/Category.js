@@ -9,9 +9,7 @@ class Category extends Component {
     constructor(props){
         super(props);
         this.state ={
-           name : "",
-           descriprion : "",
-           url : "",
+           category : [],
            login: false,
            error: ""
            
@@ -27,9 +25,7 @@ class Category extends Component {
           .then((doc) => {
             if (doc.exists()){
                this.setState({
-                  name: doc.data().name,
-                  description: doc.data().description,
-                  url: doc.data().url
+                  category: doc.data()
                })
             }
             else{
@@ -49,7 +45,7 @@ class Category extends Component {
            <React.Fragment>
              { this.state.login ? 
              (<div>
-               <Categorydisplay name={this.state.name} description={this.state.description} url={this.state.url}/>
+               <Categorydisplay name={this.state.category.name} description={this.state.category.description} url={this.state.category.url}/>
                <Categoryblog name={this.state.name}/>
              </div>)
              : (<Redirect to="/login"/>)
