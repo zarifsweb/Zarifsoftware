@@ -39,9 +39,7 @@ function App() {
             <Route path="/categories">
               <Categories />
             </Route>
-            <Route path="/category/:id">
-              <Category />
-            </Route>
+            <Route path="/category/:id" component={Category}></Route>
             <Route path="/signup">
               <Signup />
             </Route>
