@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {Redirect} from 'react-router-dom';
+import checkCookie from './cookies/checkCookie';
+import firebase from '../Config/Config';
 import Categorydisplay from './Categorydisplay';
 import Categoryblog from './Categoryblog';
 
