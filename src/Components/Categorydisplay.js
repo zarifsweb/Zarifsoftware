@@ -2,10 +2,10 @@ import React, {Component} from 'react';
 
 
 class Categorydisplay extends Component {
-    constructor(props){
-       super(props);
+   // constructor(props){
+   //    super(props);
        
-    }
+   // }
     render(){
         return (
 <section class="text-gray-700 body-font">
