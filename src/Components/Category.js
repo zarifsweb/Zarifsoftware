@@ -17,6 +17,15 @@ class Category extends Component {
         }
     }
     
+    componentWillMount(){     
+        
+
+       if(checkCookie("user")){
+          this.setState({login: true})
+       }else{
+          this.setState({login: false})
+       }
+    }
     
     render(){
         return (
