@@ -18,7 +18,14 @@ class Category extends Component {
     }
     
     componentWillMount(){     
-        
+       this.db.collection('cat').doc(this.props.id).get().then(
+          (doc)=>{
+             if(doc.exists){
+                this.setState({
+                    category: doc.data()
+                })
+             }
+          }
 
        if(checkCookie("user")){
           this.setState({login: true})
@@ -32,7 +39,7 @@ class Category extends Component {
            <React.Fragment>
              { this.state.login ? 
              (
-               <h1>this.props.match.params.id</h1>
+               <h1>{this.state.category.name}</h1>
                )
              : (<Redirect to="/login"/>)
              }
