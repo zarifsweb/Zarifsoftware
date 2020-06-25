@@ -23,9 +23,11 @@ class Category extends Component {
           .doc(this.props.match.params.id)
           .get()
           .then((doc) => {
+            let category = []
             if (doc.exists){
+               category.push({name: doc.data().name, description: doc.data().description, url: doc.data().url})
                this.setState({
-                  category: doc.data()
+                  category
                })
             }
             else{
