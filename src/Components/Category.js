@@ -22,12 +22,10 @@ class Category extends Component {
           .collection('cat')
           .doc(this.props.match.params.id)
           .get()
-          .then((doc) => {
-            let category = []
+          .then((doc) => {        
             if (doc.exists){
-               category.push({name: doc.data().name, description: doc.data().description, url: doc.data().url})
-               this.setState({
-                  category
+              this.setState({
+                  category: doc.data()
                })
             }
             else{
