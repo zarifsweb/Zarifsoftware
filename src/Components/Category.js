@@ -38,10 +38,9 @@ class Category extends Component {
         return (
            <React.Fragment>
              { this.state.login ? 
-             (<div>
+             (
                <Categorydisplay />
-               
-             </div>)
+               )
              : (<Redirect to="/login"/>)
              }
            </React.Fragment>
