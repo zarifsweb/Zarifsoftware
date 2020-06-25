@@ -3,7 +3,7 @@ import {Redirect} from 'react-router-dom';
 import checkCookie from './cookies/checkCookie';
 import firebase from '../Config/Config';
 import Categorydisplay from './Categorydisplay';
-import Categoryblog from './Categoryblog';
+//import Categoryblog from './Categoryblog';
 
 class Category extends Component {
     constructor(props){
@@ -48,7 +48,7 @@ class Category extends Component {
              { this.state.login ? 
              (<div>
                <Categorydisplay name={this.state.category.name} description={this.state.category.description} url={this.state.category.url}/>
-               <Categoryblog name={this.state.category.name}/>
+               
              </div>)
              : (<Redirect to="/login"/>)
              }
