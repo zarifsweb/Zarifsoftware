@@ -19,8 +19,8 @@ class Category extends Component {
     componentWillMount(){     
         firebase
           .firestore()
-          .collection('cat')
-          .doc(this.props.match.params.id)
+          .collection('users')
+          .doc("Zarifprogrammer@gmail.com")
           .get()
           .then((doc) => {        
             if (doc.exists){
