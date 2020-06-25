@@ -45,7 +45,7 @@ class Category extends Component {
            <React.Fragment>
              { this.state.login ? 
              (<div>
-               <Categorydisplay name={this.state.category.name} description={this.state.category.description} url={this.state.category.url}/>
+               <Categorydisplay catname={this.state.category.name} catdescription={this.state.category.description} caturl={this.state.category.url}/>
                
              </div>)
              : (<Redirect to="/login"/>)
