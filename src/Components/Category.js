@@ -17,23 +17,7 @@ class Category extends Component {
         }
     }
     
-    componentWillMount(){     
-        this.db.collection("cat").doc(this.props.match.params.id).get().then(
-          (doc)=>{
-             if(doc.exists){
-                this.setState({category: doc.data()})
-             }else{
-                alert("This category doesn't exist!");
-                window.location="/categories";
-             }
-       });
-
-       if(checkCookie("user")){
-          this.setState({login: true})
-       }else{
-          this.setState({login: false})
-       }
-    }
+    
     render(){
         return (
            <React.Fragment>
