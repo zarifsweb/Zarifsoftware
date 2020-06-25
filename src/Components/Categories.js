@@ -22,7 +22,7 @@ class Categories extends Component {
           .then((data) => {
             let categories = [];
             data.forEach((doc) => {
-                categories.push({doc.data(), id: doc.id});
+                categories.push({data: doc.data(), id: doc.id});
             });
             this.setState({categories});
           })
@@ -49,11 +49,11 @@ class Categories extends Component {
     <React.Fragment>    
       <div class="py-8 flex flex-wrap md:flex-no-wrap p-8" style={{backgroundColor: "white"}}>
       <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-           <img class="lg:h-48 md:h-36 w-full object-cover object-center" src={category.url} alt={category.name} style={{ backgroundColor: "white", width: "200px", height: "200px"}} />
+           <img class="lg:h-48 md:h-36 w-full object-cover object-center" src={category.data.url} alt={category.data.name} style={{ backgroundColor: "white", width: "200px", height: "200px"}} />
       </div>
         <div class="md:flex-grow">
-          <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{category.name}</h2>
-          <p class="leading-relaxed">{category.description.substring(0, 100)}..</p>
+          <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">{category.data.name}</h2>
+          <p class="leading-relaxed">{category.data.description.substring(0, 100)}..</p>
           <a href={`/category/${this.state.id}`} class="text-indigo-500 inline-flex items-center mt-4">Learn More
             <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14"></path>
